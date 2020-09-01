@@ -2,6 +2,8 @@ package apps;
 
 import java.util.Date;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entidades.Department;
 import model.entidades.Seller;
 
@@ -12,6 +14,10 @@ public class TstClass {
 		Seller seller = new Seller(21, "Ze", "email@email.com", new Date(), 3000.00, obj);
 		System.out.println(obj);
 		System.out.println(seller);
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		Seller seller2 = sellerDao.findById(3);
+		System.out.println(seller2);
 		
 
 	}
