@@ -43,6 +43,10 @@ public class TstClass {
 		sellerDao.insert(newSeller);
 		System.out.println("id " + newSeller.getId());
 
+		System.out.println("================ Update ");
+		seller = sellerDao.findById(1);
+		seller.setName("joao da silva");
+		sellerDao.update(seller);
 		
 
 	}
