@@ -48,6 +48,11 @@ public class TstClass {
 		seller.setName("joao da silva");
 		sellerDao.update(seller);
 		
+		System.out.println("================ Delete ");
+		//seller = sellerDao.findById(1);
+		
+		sellerDao.deleteById(10);
+
 
 	}
 
