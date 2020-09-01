@@ -29,7 +29,19 @@ public class TstClass {
 			System.out.println(obj2);
 		}
 		
-		System.out.println(seller2);	
+		System.out.println("================");
+		
+		//Department dep = new Department(2, null);
+		List<Seller> listall = sellerDao.findAll();
+				
+		for(Seller obj2 : listall) {
+			System.out.println(obj2);
+		}
+
+		System.out.println("================ Insert ");
+		Seller newSeller = new Seller(null, "greg", "email@email.com", new Date(), 60000.00, department);
+		sellerDao.insert(newSeller);
+		System.out.println("id " + newSeller.getId());
 
 		
 
